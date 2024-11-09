@@ -1,6 +1,6 @@
 package com.example.coreflexgym.Entities;
 
-public enum EProgram {
+public enum ProgrammeType {
     FITNESS,
     MENTAL,
     CROSSFIT,

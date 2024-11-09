@@ -6,8 +6,6 @@ import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
-import java.util.List;
-
 @Data
 @Builder
 @NoArgsConstructor
@@ -22,7 +20,7 @@ public class Programme {
 
     @Enumerated(EnumType.STRING)
     @Column(name = "type", nullable = false)
-    private EProgram type;
+    private ProgrammeType type;
 
     @Column(name = "titre", nullable = false)
     private String titre;
@@ -30,7 +28,8 @@ public class Programme {
     @Column(name = "description")
     private String description;
 
+    @Enumerated(EnumType.STRING)
+    @Column(name = "ExerciseType", nullable = false)
+    private ExerciseType ExerciseType;
 
-    @OneToMany(mappedBy = "programme", cascade = CascadeType.ALL, orphanRemoval = true)
-    private List<Exercice> exercices;
 }

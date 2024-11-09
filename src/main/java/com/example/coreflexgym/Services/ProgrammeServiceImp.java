@@ -42,7 +42,8 @@ public class ProgrammeServiceImp implements IProgramme {
             updatedProgramme.setType(programme.getType());
             updatedProgramme.setTitre(programme.getTitre());
             updatedProgramme.setDescription(programme.getDescription());
-            updatedProgramme.setExercices(programme.getExercices());
+            updatedProgramme.setExerciseType(programme.getExerciseType());
+
             return programmeRepository.save(updatedProgramme);
         }
         return null;
